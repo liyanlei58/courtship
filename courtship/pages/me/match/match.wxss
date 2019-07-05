@@ -1,0 +1,5 @@
+/* pages/me/match/match.wxss */
+.img {
+  width: 46px;
+  height: 46px;
+}

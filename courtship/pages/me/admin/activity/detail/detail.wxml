@@ -1,0 +1,47 @@
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading" />
+    <text class="loading-text">玩命加载中</text>
+  </view>
+</block>
+<block wx:else>
+  <!-- 活动详情 -->
+  <view class="film-item mt50">
+    <view class="film-info">
+      <view>
+        <text class="person">{{activity.date}}</text>
+        <text class="film-title">{{activity.name}}</text>
+        <!-- <text class="film-year">{{item.remark}}</text> -->
+      </view>
+      <view class="casts">
+        <text class="label">内容：</text>
+        <block>
+          <text class="person">{{activity.content}}</text>
+        </block>
+      </view>
+      <view class="casts">
+        <text class="label">备注：</text>
+        <block>
+          <text class="person">{{activity.remark}}</text>
+        </block>
+      </view>
+
+    </view>
+  </view>
+
+
+
+  <view class="section">
+    <button type="primary" bindtap="generateCode" hover-class="edit-btn-hover" class='btn'> 获取活动参与码 </button>
+  </view>
+  <view class="section">
+    <view class='label ml290'> {{code}} </view>
+  </view>
+
+  <view class="section mt500">
+  <button type="warn" bindtap="removeActivity" hover-class="edit-btn-hover" class='btn'> 删除活动 </button>
+  </view>
+  
+
+
+</block>

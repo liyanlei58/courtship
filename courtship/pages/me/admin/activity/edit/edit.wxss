@@ -1,0 +1,34 @@
+input {
+  margin: 0 0 3px 18px;
+  width: 490rpx;
+  /* color:#575353; */
+  /* font-size:14px */
+}
+textarea{
+  margin: 0 0 3px 18px;
+  width: 400rpx;
+}
+.film-item .label {
+  color:#575353;
+  width: 15%
+  /* font-size:14px */
+}
+
+.ml20 {
+  margin-left: 20rpx;
+}
+.ml30 {
+  margin-left: 30rpx;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+
+.section view {
+  margin-right: 20rpx;
+}
+
+

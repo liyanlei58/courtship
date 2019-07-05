@@ -1,0 +1,5 @@
+/* pages/score/list/list.wxss */
+.img {
+  width: 46px;
+  height: 46px;
+}

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/activity/list/list",
+    "pages/activity/detail/detail",
+    "pages/score/activity/activity",
+    "pages/score/activityDetail/activityDetail",
+    "pages/score/person/person",
+    "pages/love/list/list",
+    "pages/love/person/person",
+    "pages/me/index/index",
+    "pages/me/info/info",
+    "pages/me/edit/edit",
+    "pages/me/match/match",
+    "pages/me/admin/activity/list/list",
+    "pages/me/admin/activity/detail/detail",
+    "pages/me/admin/activity/edit/edit",
+    "pages/auth/auth"
+  ],
+  "tabBar": {
+    "color": "#dc786b",
+    "selectedColor": "#f8a39c",
+    "borderStyle": "white",
+    "backgroundColor": "#fcf3f2",
+    "list": [
+      {
+        "pagePath": "pages/activity/list/list",
+        "iconPath": "images/activity.png",
+        "selectedIconPath": "images/activity-active.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/score/activity/activity",
+        "iconPath": "images/score.png",
+        "selectedIconPath": "images/score-active.png",
+        "text": "打分"
+      },
+      {
+        "pagePath": "pages/love/list/list",
+        "iconPath": "images/love.png",
+        "selectedIconPath": "images/love-active.png",
+        "text": "心动时刻"
+      },
+      {
+        "pagePath": "pages/me/index/index",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fab4ab",
+    "navigationBarTitleText": "灵鸽",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

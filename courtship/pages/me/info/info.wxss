@@ -1,0 +1,46 @@
+.ml5 {
+  margin-left: 5rpx;
+}
+
+.ml30 {
+  margin-left: 30rpx;
+}
+
+.edit-btn {
+  margin-right: 5rpx;
+  margin: 15rpx 10rpx;
+  font-size: 30rpx;
+  height: 70rpx;
+  width: 150rpx;
+}
+
+.edit-btn-hover {
+  background-color: red;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  background-color: #eee;
+}
+
+.section {
+  margin-left: 30rpx;
+}
+
+.user-info {
+  padding: 10px;
+  width: 90%;
+}
+
+.film-item {
+  padding: 10px;
+  display: flex;
+  width: 95%;
+  border-bottom: 1px solid rgb(240, 239, 239);
+}
+
+.edit {
+  margin-left: 260rpx;
+  margin-top: 10rpx;
+}

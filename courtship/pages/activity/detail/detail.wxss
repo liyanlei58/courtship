@@ -1,0 +1,36 @@
+.img {
+  width: 80px;
+  height: 80px;
+  background-color: #eee;
+}
+
+.txt {
+  width: 30%;
+}
+
+.txt-joined {
+  color: #ac6a6a;
+  padding: 20rpx;
+  margin-left: 300rpx;
+}
+
+.wd70 {
+  width: 70%;
+}
+.section {
+  margin-left:35rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 12rpx;
+  font-size: 14px;
+}
+
+.label {
+  color: #575353;
+  width: 26%;
+}
+
+input {
+  margin: 0 0 3px 18px;
+  width: 300rpx;
+}

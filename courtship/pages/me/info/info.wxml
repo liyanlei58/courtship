@@ -1,0 +1,77 @@
+<view class="container">
+
+  <view class="user-info">
+    <view class="film-item">
+      <view class="section">
+        <image src="{{userInfo.photoId}}" mode="aspectFit" class='image'></image>
+      </view>
+      <view class="section">
+        <view class='image  ml30'>
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+    </view>
+
+    <view class="film-item">
+      <view class="section">
+        <open-data type="userNickName"></open-data>
+        <text class="person ml30">{{userInfo.gender}}</text>
+        <text class="person ml30">{{userInfo.birthday}}</text>
+        </view>
+        <view class="section" wx:if="{{userInfo.car == '有'}}">
+        <text class="label">有车</text>
+      </view>
+      <view class="section" wx:if="{{ userInfo.house != 1}}">
+        <!-- <text class="label">房:</text> -->
+        <text class="person">{{houseArray[userInfo.house]}}</text>
+      </view>
+      
+    </view>
+
+    <view class="film-item">
+      <view class="section">
+        <text class="person ml10">{{userInfo.job}}</text>
+      </view>
+      <view class="section">
+        <text class="person ml10">{{userInfo.hometown[0]}}</text>
+        <text class="person ml10">{{userInfo.hometown[1]}}</text>
+        <text class="person ml10">{{userInfo.hometown[2]}}</text>
+      </view>
+    </view>
+
+    <view class="film-item">
+      <view class="section">
+        <text class="label">真实姓名:</text>
+        <text class="person">{{userInfo.realName}}</text>
+      </view>
+      <view class="section">
+        <text class="label">住址:</text>
+        <text class="person">{{userInfo.address}}</text>
+      </view>
+    </view>
+
+    <view class="film-item">
+      <view class="section">
+        <text class="label">定居:</text>
+        <text class="person">{{userInfo.settle}}</text>
+      </view>
+      
+    </view>
+    <view class="film-item">
+      <view class="section">
+        <text class="label">爱好:</text>
+        <text class="person">{{userInfo.hobby}}</text>
+      </view>
+    </view>
+
+    <view class="film-item">
+      <view class="section">
+        <text class="label">要求:</text>
+        <text class="person">{{userInfo.demand}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="edit">
+    <button type="primary" bindtap="toEdit" hover-class="edit-btn-hover" class='edit-btn section'> 编辑 </button>
+  </view>
+</view>

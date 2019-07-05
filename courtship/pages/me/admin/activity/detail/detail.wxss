@@ -1,0 +1,37 @@
+
+.txt {
+  width: 30%;
+}
+
+.mt50 {
+  margin-top: 50rpx;
+}
+
+.mt500 {
+  margin-top: 500rpx;
+}
+
+.ml290 {
+  margin-left: 290rpx;
+}
+.section {
+  margin-left:35rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 12rpx;
+  font-size: 14px;
+}
+
+.label {
+  color: #575353;
+  width: 26%;
+}
+
+
+.btn {
+  margin-top: 15rpx;
+  height: 80rpx;
+  width: 280rpx;
+  font-size: 14px;
+  border-radius: 3px;
+}

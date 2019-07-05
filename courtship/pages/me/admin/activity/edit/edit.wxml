@@ -1,0 +1,31 @@
+<view class="container film-list">
+<form bindsubmit="formSubmit" class='pd20'>
+  <view class="film-item">
+    <view class="label">名称:</view>
+    <input name="name" placeholder="奥森一日游" value="{{activity.name}}" />
+  </view>
+  <view class="film-item">
+    <view class="label">日期:</view>
+    <picker mode="date" value="{{date}}" start="2019-03-01" end="2029-03-01" bindchange="bindDateChange" class="ml20" name="date">
+      <view class="picker ml20">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="film-item">
+    <view class="label">内容:</view>
+    <input name="content" placeholder="内容 " value="{{activity.content}}" />
+  </view>
+  <view class="film-item">
+    <view class="label">备注:</view>
+    <input name="remark" placeholder="备注" value="{{activity.remark}}" />
+  </view>
+
+
+  <view class="section">
+    <!-- <button class='btn-form' formType="reset">重置</button> -->
+    <button type="primary" class='btn-form' formType="submit">保存</button>
+  </view>
+</form>
+
+</view>

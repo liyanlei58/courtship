@@ -1,0 +1,48 @@
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading" />
+    <text class="loading-text">玩命加载中</text>
+  </view>
+</block>
+<block wx:else>
+  <!-- 活动详情 -->
+  <view class="film-item">
+    <view class="film-info">
+      <view>
+        <text class="person">{{activity.date}}</text>
+        <text class="film-title">{{activity.name}}</text>
+        <!-- <text class="film-year">{{item.remark}}</text> -->
+      </view>
+      <view class="casts">
+        <text class="label">内容：</text>
+        <block>
+          <text class="person">{{activity.content}}</text>
+        </block>
+      </view>
+      <view class="casts">
+        <text class="label">备注：</text>
+        <block>
+          <text class="person">{{activity.remark}}</text>
+        </block>
+      </view>
+
+    </view>
+  </view>
+
+    <block wx:if="{{!joined}}">
+      <form bindsubmit="joinActivity" bindreset="formReset" class='film-info'>
+          <view class="section">
+            <text class="label">活动参与码:</text>
+            <input name="code" placeholder="活动参与码" />
+          </view>
+          <view class="section">
+            <button type="primary" class='btn-form' formType="submit"> 参加 </button>
+          </view>
+      </form>
+    </block>
+    <block wx:else>
+      <view class="txt-joined">已参加</view>
+    </block>
+
+
+</block>

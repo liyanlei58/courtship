@@ -1,0 +1,99 @@
+.ml5 {
+  margin-left: 5rpx;
+}
+.person {
+  margin-left: 15rpx;
+}
+
+.ml30 {
+  margin-left: 30rpx;
+}
+
+.ml50 {
+  margin-left: 50rpx;
+}
+.content{
+  padding: 30rpx;
+  width: 93%
+}
+
+.mr10 {
+  margin-right: 10rpx;
+}
+.wd50 {
+  width: 50rpx;
+}
+
+
+.slider{
+  width: 70%;
+  margin-top:0rpx;
+  margin-left:60rpx;
+}
+
+input {
+  margin: 0 0 3px 18px;
+  width: 490rpx;
+  /* color:#575353; */
+  /* font-size:14px */
+}
+textarea{
+  margin: 0 0 3px 18px;
+  width: 400rpx;
+}
+.label {
+  color:#575353;
+  /* font-size:14px */
+}
+.score {
+  color:#8a3636;
+  padding: 3rpx;
+  /* font-size:14px */
+}
+.tip-score {
+  color:#72c53ace;
+  padding: 5rpx;
+  /* font-size:14px */
+}
+.tip {
+  background-color: rgb(249, 250, 207);
+  color:#e03906e0;
+  padding: 3rpx;
+  width:93%;
+  font-size:12px
+}
+
+
+.ml20 {
+  margin-left: 20rpx;
+}
+.ml30 {
+  margin-left: 30rpx;
+}
+
+.mtb30 {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.btn-img {
+  margin-top: 15rpx;
+  height: 80rpx;
+  width: 180rpx;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+}
+
+.section view {
+  margin-right: 20rpx;
+}
+
+.btn-area {
+  margin: 20rpx;
+}
+

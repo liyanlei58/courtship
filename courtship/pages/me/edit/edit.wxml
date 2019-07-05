@@ -1,0 +1,109 @@
+
+<view class='ml30'>
+
+<form bindsubmit="formSubmit">
+  <!-- <view class="section section_gap">
+      <view class="section_title">是否公开信息</view>
+      <switch name="isPub" />
+    </view> -->
+  <view class="section section_gap">
+    <view class="label">性别:</view>
+    <radio-group name="gender" class="ml20">
+      <block wx:if="{{userInfo.gender == '女'}}">
+        <label>
+          <radio value="男" />男</label>
+        <label>
+          <radio value="女" class='ml20' checked />女</label>
+      </block>
+      <block wx:else>
+        <label>
+          <radio value="男" checked />男</label>
+        <label>
+          <radio value="女" class='ml20' />女</label>
+      </block>
+    </radio-group>
+  </view>
+
+  <view class="section">
+    <view class="label">籍贯:</view>
+    <picker mode="region" bindchange="bindHometownChange" value="{{hometown}}" custom-item="{{customItem}}" class="ml20" name="hometown">
+      <view class="picker">
+        {{hometown[0]}} {{hometown[1]}} {{hometown[2]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="label">出生年月:</view>
+    <picker mode="date" value="{{birthday}}" fields='year' start="1960" end="2010" bindchange="bindBirthdayChange" class="ml20" name="birthday">
+      <view class="picker">
+        {{birthday}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="label">真实姓名:</view>
+    <input name="realName" placeholder="真实姓名" value="{{userInfo.realName}}" />
+  </view>
+  <view class="section">
+    <view class="label">职业:</view>
+    <input name="job" placeholder="职业" value="{{userInfo.job}}" />
+  </view>
+  <view class="section">
+    <view class="label">住址:</view>
+    <input name="address" placeholder="住址" value="{{userInfo.address}}" />
+  </view>
+
+  <view class="section">
+    <view class="label">爱好:</view>
+    <input name="hobby" placeholder="爱好" value="{{userInfo.hobby}}" />
+  </view>
+  <view class="section">
+    <view class="label">定居:</view>
+    <input name="settle" placeholder="定居" value="{{userInfo.settle}}" />
+  </view>
+  <view class="section">
+    <view class="label">要求:</view>
+    <textarea name="demand" auto-height placeholder="要求" value="{{userInfo.demand}}" />
+  </view>
+  <view class="section">
+    <view class="label">车:</view>
+    <radio-group name="car" class="ml20">
+      <block wx:if="{{userInfo.car == '有'}}">
+        <label>
+          <radio value="无" />无</label>
+        <label>
+          <radio value="有" class='ml20' checked/>有</label>
+      </block>
+      <block wx:else>
+        <label>
+          <radio value="无" checked />无</label>
+        <label>
+          <radio value="有" class='ml20' />有</label>
+      </block>
+    </radio-group>
+  </view>
+  <view class="section">
+    <view class="label">房:</view>
+    <picker name="house" bindchange="bindHouseChange" value="{{houseIndex}}" range="{{houseArray}}" class="ml20">
+      <view class="picker">
+        {{houseArray[houseIndex]}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 上传照片 -->
+  <view class="uploader">
+    <view class="uploader-text">
+      <button bindtap="uploadPhoto" class="btn-img ml20" type="primary">上传照片</button>
+    </view>
+    <view class="uploader-container" wx:if="{{photoId}}">
+      <image class="uploader-image" src="{{photoId}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>
+
+  <view class="section">
+    <button type="primary" class="btn-img" formType="submit">保存</button>
+  </view>
+</form>
+
+</view>

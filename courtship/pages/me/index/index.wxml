@@ -1,0 +1,12 @@
+<view  class="container film-list" >
+    <view class="film-item " bindtap="toMeEdit" >
+    <text class="film-title">我的资料</text>
+    </view>
+    <view class="film-item" bindtap="toMeMatch" >
+      <text class="film-title">互相倾慕</text>
+    </view>
+    <view class="film-item" bindtap="toActivityAdmin" wx:if='{{hasAdmin}}' >
+      <text class="film-title">活动管理</text>
+    </view>
+    
+</view>

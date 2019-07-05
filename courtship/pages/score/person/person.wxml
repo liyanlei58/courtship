@@ -1,0 +1,88 @@
+<view class="container content">
+
+  <view class="film-item">
+    <view wx:if="{{person.photoId}}">
+      <image src="{{person.photoId}}" mode="aspectFit" class='img-big'></image>
+    </view>
+    <view class='ml30'>
+    <image src="{{person.avatarUrl}}" mode="aspectFit" class='img-big'></image>
+    </view>
+  </view>
+
+  <view class="film-item">
+  <text>{{person.nickName}}</text>
+    <text class="person ml30">{{person.gender}}</text>
+    <text class="person ml30">{{person.birthday}}</text>
+    <view class="section" wx:if="{{person.car == '有'}}">
+      <text class="label ml30">有车</text>
+    </view>
+    <view class="section" wx:if="{{ person.house != 1}}">
+      <!-- <text class="label">房:</text> -->
+      <text class="person ml50">{{houseArray[person.house]}}</text>
+    </view>
+  </view>
+
+  <view class="film-item">
+    <text>{{person.job}}</text>
+    <text class="person ml10">{{person.hometown[0]}}</text>
+    <text class="person ml10">{{person.hometown[1]}}</text>
+    <text class="person ml10">{{person.hometown[2]}}</text>
+  </view>
+
+  <view class="film-item">
+    <view class="section">
+      <text class="label">真实姓名:</text>
+      <text class="person">{{person.realName}}</text>
+    </view>
+    <view class="section">
+      <text class="label" class='ml50'>住址:</text>
+      <text class="person">{{person.address}}</text>
+    </view>
+  </view>
+
+  <view class="film-item">
+    <view class="section">
+      <text class="label">定居:</text>
+      <text class="person">{{person.settle}}</text>
+    </view>
+    
+  </view>
+  <view class="film-item">
+    <view class="section">
+      <text class="label">爱好:</text>
+      <text class="person">{{person.hobby}}</text>
+    </view>
+  </view>
+
+  <view class="film-item">
+    <view class="section">
+      <text class="label">要求:</text>
+      <text class="person">{{person.demand}}</text>
+    </view>
+  </view>
+
+  <view class="film-item" wx:if="{{!isSelf}}">
+    <form bindsubmit="score" bindreset="formReset" report-submit="true">
+
+      <view class="section mtb30">
+        <text class="label">打分:</text>
+        <slider name="score" value="{{score.score}}" show-value class='slider' />
+      </view>
+
+      <view class="section">
+        <view class="label ">评分理由:</view>
+        <textarea name="reason" value="{{score.reason}}" auto-height placeholder="评分理由" />
+      </view>
+      <view class="section mtb30">
+        <view class="tip">Tips：当两个人互相打分，并且分值都超过
+          <text class='tip-score'>60</text>分，才能匹配成功</view>
+      </view>
+
+      <view class="section">
+        <button class='btn-img' formType="reset">重置</button>
+        <button type="primary" class='btn-img' formType="submit">保存</button>
+      </view>
+
+    </form>
+  </view>
+</view>

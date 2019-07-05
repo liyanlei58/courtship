@@ -1,0 +1,75 @@
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading" />
+    <text class="loading-text">玩命加载中</text>
+  </view>
+</block>
+<block wx:else>
+  <!-- 活动详情 -->
+  <view class="film-item">
+    <view class="film-info">
+      <view>
+        <text class="person">{{activity.date}}</text>
+        <text class="film-title">{{activity.name}}</text>
+        <!-- <text class="film-year">{{item.remark}}</text> -->
+      </view>
+      <view class="casts">
+        <text class="label">内容：</text>
+        <block>
+          <text class="person">{{activity.content}}</text>
+        </block>
+      </view>
+      <view class="casts">
+        <text class="label">备注：</text>
+        <block>
+          <text class="person">{{activity.remark}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- 参与人员 -->
+    <scroll-view style="height: 100%;" scroll-y="true" class="container film-list" bindscroll="scroll" bindscrolltolower="scrollToLower">
+      <block wx:for="{{activityUserList}}" wx:key="{{index}}">
+        <view class="film-item" bindtap="toPerson" data-id="{{item._openid}}" data-title="{{item.user.nickName}}">
+
+          <image src="{{item.user.photoId}}" mode="aspectFit" class='image'></image>
+
+          <view class="film-info">
+            <view class="col-display">
+              <view class="txt">{{item.user.nickName}}</view>
+              <view class="txt">{{item.user.gender}}</view>
+              <view class="txt">{{item.user.birthday}}</view>
+            </view>
+            <view class="col-display">
+              <view class="txt">{{item.user.job}}</view>
+              <view class="txt">{{item.user.address}}</view>
+            </view>
+            <view class="col-display">
+              <view class="txt">{{item.user.hometown[0]}}</view>
+              <view class="txt">{{item.user.hometown[1]}}</view>
+              <view class="txt">{{item.user.hometown[2]}}</view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+      
+
+      <view class="load-more-wrap">
+        <block wx:if="{{hasMore}}">
+          <view class="load-content">
+            <!-- <text class="weui-loading"/><text class="loading-text">玩命加载中</text> -->
+          </view>
+        </block>
+        <block wx:else>
+          <view class="load-content">
+            <text>没有更多内容了</text>
+          </view>
+        </block>
+      </view>
+
+    </scroll-view>
+
+    
+</block>
